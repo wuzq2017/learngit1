@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <sys/stat.h>
 #include <string.h>
+#include <pthread.h>
 
 key_t key;
 int msq_id;
@@ -63,10 +64,11 @@ void main(int argc, char **argv)
   msq_id = msgget(key, IPC_CREAT|S_IRUSR|S_IWUSR);
   pthread_create(&tid1, NULL, th_func1, NULL);
   pthread_create(&tid2, NULL, th_func2, NULL);
-  pthread_create();
+  //pthread_create();
 
   while (1) {
     printf("===========\n");
+    printf("\033[41;36mPumpKing\033[0m\n");
     sleep(1);
   }
 
