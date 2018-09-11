@@ -14,7 +14,7 @@ int msq_id;
 pthread_t tid1,tid2;
 int a;
 int b;
-
+int c;
 void *th_func1(void *arg)
 {
   while(1)
@@ -67,7 +67,7 @@ void main(int argc, char **argv)
   //pthread_create();
 
   while (1) {
-    printf("===========\n");
+    printf("===========,%d\n",c);
     printf("\033[41;36mPumpKing\033[0m\n");
     sleep(1);
   }
